@@ -5,7 +5,7 @@ Usage:
     python setup.py py2app
 """
 from setuptools import setup
-DATA_FILES = ['faces', 'word_files']
+DATA_FILES = ['faces', 'nama_benda']
 APP = ['PySpell.py']
 #OPTIONS = {'argv_emulation': True}
 

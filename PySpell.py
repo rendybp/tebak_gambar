@@ -24,9 +24,9 @@ EXEC_DIR = os.path.dirname(__file__)
 
 ### Test for platform since the .app bundle behaves strangely
 if sys.platform == 'darwin':
-    image_dir = os.walk("word_files")
+    image_dir = os.walk("nama_benda")
 else:
-    image_dir = os.walk(os.path.join(EXEC_DIR, "word_files"))
+    image_dir = os.walk(os.path.join(EXEC_DIR, "nama_benda"))
 
 
 pygame.init()

@@ -17,9 +17,9 @@ EXEC_DIR = os.path.dirname(__file__)
 class Word(object):
     def __init__(self, word):
         if sys.platform == 'darwin':
-            self.word_image = os.path.join('word_files', word)
+            self.word_image = os.path.join('nama_benda', word)
         else:
-            self.word_image = os.path.join(EXEC_DIR, "word_files", word)
+            self.word_image = os.path.join(EXEC_DIR, "nama_benda", word)
         self.word = word
         self.image = pygame.image.load(self.word_image)
         self.rect = self.image.get_rect()
