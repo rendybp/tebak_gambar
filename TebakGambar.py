@@ -30,7 +30,7 @@ else:
 
 
 pygame.init()
-pygame.display.set_caption("PySpell")
+pygame.display.set_caption("TebakGambar")
 #### Globals
 screen = pygame.display.set_mode((600, 600))
 font = pygame.font.SysFont('Helvetica', 50)
