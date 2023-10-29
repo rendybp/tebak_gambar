@@ -88,14 +88,13 @@ def main():
         screen.fill(THECOLORS['white'])
         
         header_x = (screen_x - header_image.get_width()) // 2
-        header_y = 10
+        header_y = 5
         screen.blit(header_image, (header_x, header_y))
         
         the_word_x = (screen_x - the_word.width) // 2
-        the_word_y = header_y + header_image.get_height() + 10
+        the_word_y = header_y + header_image.get_height() + 5
         
         the_word.draw(screen, the_word_x, the_word_y)
-        
         
         
         # the_word.draw(screen, (screen_x/2 - the_word.width/2), 50)
