@@ -20,7 +20,8 @@ import random
 import sys
 from faces import Face
 
-EXEC_DIR = os.path.dirname(__file__)  
+EXEC_DIR = os.path.dirname(__file__)
+header_image = pygame.image.load(os.path.join(EXEC_DIR, "judul", "header.png"))  
 
 ### Test for platform since the .app bundle behaves strangely
 if sys.platform == 'darwin':
@@ -32,7 +33,7 @@ else:
 pygame.init()
 pygame.display.set_caption("TebakGambar")
 #### Globals
-screen = pygame.display.set_mode((600, 600))
+screen = pygame.display.set_mode((700, 700))
 font = pygame.font.SysFont('Helvetica', 50)
 clock = pygame.time.Clock()
 image_list = []
@@ -85,7 +86,19 @@ def main():
         key = pygame.key.get_pressed()
         mods = pygame.key.get_mods()
         screen.fill(THECOLORS['white'])
-        the_word.draw(screen, (screen_x/2 - the_word.width/2), 50)
+        
+        header_x = (screen_x - header_image.get_width()) // 2
+        header_y = 10
+        screen.blit(header_image, (header_x, header_y))
+        
+        the_word_x = (screen_x - the_word.width) // 2
+        the_word_y = header_y + header_image.get_height() + 10
+        
+        the_word.draw(screen, the_word_x, the_word_y)
+        
+        
+        
+        # the_word.draw(screen, (screen_x/2 - the_word.width/2), 50)
 
         ### Begin calculations for total width of area for typing
         num_lines = len(the_word.letters)  ### Number of lines
