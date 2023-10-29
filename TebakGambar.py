@@ -31,9 +31,9 @@ else:
 
 
 pygame.init()
-pygame.display.set_caption("TebakGambar")
+pygame.display.set_caption("Tebak Gambar")
 #### Globals
-screen = pygame.display.set_mode((700, 700))
+screen = pygame.display.set_mode((650, 650))
 font = pygame.font.SysFont('Helvetica', 50)
 clock = pygame.time.Clock()
 image_list = []
@@ -129,12 +129,11 @@ def main():
             correct_letter = font.render(letter, 1, (255, 10, 10))
             letter_size = font.size(letter)                        
             if letter == "-":
-                screen.blit(correct_letter, [letter_beginning + (underline_width/2 - letter_size[0]/2), 400])             
+                screen.blit(correct_letter, [letter_beginning + (underline_width/2 - letter_size[0]/2), 500])             
             letter_beginning += underline_width + 20 
             
-           
             line_x2 = line_x1 + underline_width 
-            pygame.draw.line(screen, THECOLORS['black'], (line_x1, 460), (line_x2, 460), 2)
+            pygame.draw.line(screen, THECOLORS['black'], (line_x1, 560), (line_x2, 560), 2)
             line_x1 += underline_width + 20 
             line_x2 += underline_width + 20 
         
@@ -223,7 +222,7 @@ def main():
 
                 correct_letter = font.render(letter, 1, (255, 10, 10))
                 letter_size = font.size(letter)                        
-                screen.blit(correct_letter, [letter_dict.get(cursor)[0], 400])             
+                screen.blit(correct_letter, [letter_dict.get(cursor)[0], 500])             
                 cursor += 1
         
         pygame.display.update()                                              
