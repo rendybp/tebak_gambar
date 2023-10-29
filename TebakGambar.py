@@ -56,7 +56,7 @@ the_word = Word(random.choice(image_list))
 #### Keys to ignore while entering letters
 ignored_keys = ('escape', 'return', 'backspace', 'enter', 'space', 'right shift'\
                 ,'left shift', 'left meta', 'right meta', 'f1', 'f2', 'f3', 'f4', 'f5'\
-                ,'f6', 'f7', 'f8', 'f9', 'f10', 'f11', 'f12', 'f13', 'f14', 'f15', 'caps lock')
+                ,'f6', 'f7', 'f8', 'f9', 'f10', 'f11', 'f12', 'f13', 'f14', 'f15', 'caps lock', 'print screen', 'left ctrl')
 
 ### Faces and groups to hold them
 happy = Face('happy')
