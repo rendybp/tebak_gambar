@@ -10,7 +10,6 @@ from faces import Face
 EXEC_DIR = os.path.dirname(__file__)
 header_image = pygame.image.load(os.path.join(EXEC_DIR, "judul", "header.png"))  
 
-### Test for platform since the .app bundle behaves strangely
 if sys.platform == 'darwin':
     image_dir = os.walk("nama_benda")
 else:
@@ -19,7 +18,6 @@ else:
 
 pygame.init()
 pygame.display.set_caption("Tebak Gambar")
-#### Globals
 screen = pygame.display.set_mode((650, 650))
 font = pygame.font.SysFont('Helvetica', 50)
 clock = pygame.time.Clock()
@@ -29,23 +27,21 @@ wrong = False
 entered_text = []
 screen_x, screen_y = screen.get_size()
 
-### Generate list of files from the image folder ####
 for root, dir, files in image_dir:
     for file in files:
         if '.DS_Store' not in file:
             image_list.append(file)
 
 
-### Create inital image on screen
 the_word = Word(random.choice(image_list))
 #the_word = Word('yo-yo.png')
 
-#### Keys to ignore while entering letters
+#### Keys yang diabaikan
 ignored_keys = ('escape', 'return', 'backspace', 'enter', 'space', 'right shift'\
                 ,'left shift', 'left meta', 'right meta', 'f1', 'f2', 'f3', 'f4', 'f5'\
                 ,'f6', 'f7', 'f8', 'f9', 'f10', 'f11', 'f12', 'f13', 'f14', 'f15', 'caps lock', 'print screen', 'left ctrl')
 
-### Faces and groups to hold them
+### status wajah
 happy = Face('happy')
 
 sad = Face('sad')
