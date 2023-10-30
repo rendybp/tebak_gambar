@@ -6,7 +6,7 @@ Cara menjalankan game :
 1. Install library pygame
 2. Buka folder tebak_gambar
 3. Run python TebakGambar.py
-4. Gambe berhasil dijalankan
+4. Game berhasil dijalankan
 
 Game ini cukup mudah dan simpel :
 
