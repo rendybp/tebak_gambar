@@ -1,14 +1,3 @@
-#!/usr/bin/env python
-# __future__ import print_function
-#from __future__ import unicode_literals
-#### REMEMBER TO USE
-#### str.format() instead of %s
-#### Python 3 often returns iterables where Python 2 returned lists.
-#### This is usually fine, but if a list is realy needed, use the list() factory
-###### function.
-#### For example, given dictionary, d, list(d.keys()) returns its keys as a list.
-#### Affected functions and methods include dict.items(), 
-####### dict.keys(), dict.values(), filter(), map(), range(), and zip().
 import os
 import pygame
 import sys
